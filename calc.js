@@ -18,13 +18,13 @@ function clearAll () {
     out.textContent = 0;
 }
 
-document.querySelector ('.Ac').onclick = clearAll;
+document.querySelector ('.ac').onclick = clearAll;
 
 document.querySelector ('.buttons').onclick = (event) => {
     //нажата не кнопка
     if(!event.target.classList.contains('btn')) return;
     // нажата кнопка Clear All Ac
-    if(!event.target.classList.contains('Ac')) return;
+    if(!event.target.classList.contains('ac')) return;
 
     out.textContent = ''; 
     // получаю нажатую кнопку
