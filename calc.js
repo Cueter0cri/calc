@@ -61,6 +61,7 @@ document.querySelector('.buttons').onclick = (event) => {
 
     //нажато =
     if (key === '=') {
+        if (b === '') b = a;
         switch (sign) {
             case '+':
                a = (+a) + (+b);
@@ -73,8 +74,15 @@ document.querySelector('.buttons').onclick = (event) => {
             case 'x':
                a = a * b;
                break;
-
             case '/':
+               if (b === '0') {
+                   out.textContent = 'Ошибка';
+                   a = '';
+                   b = '';
+                   sign = '';
+                   return;
+
+               }
                a = a / b;
                break;
         }
